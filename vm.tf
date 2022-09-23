@@ -92,19 +92,19 @@ resource "azurerm_virtual_machine" "example" {
     managed_disk_type = "Standard_LRS"
   }
 
-    os_profile {
-      computer_name  = "hostname"
-      admin_username = "testadmin"
-      admin_password = "Password1234!"
-    }
+  os_profile {
+    computer_name  = "hostname"
+    admin_username = "testadmin"
+    admin_password = "Password1234!"
+  }
 
   os_profile_linux_config {
     disable_password_authentication = true
   }
   tags = {
-    git_commit           = "5e27e7d0a73139c83c16e88b4f4aca0eee81319c"
+    git_commit           = "8a30ad14fcd47a709b591448ae378b510ac44b60"
     git_file             = "vm.tf"
-    git_last_modified_at = "2022-09-23 05:10:11"
+    git_last_modified_at = "2022-09-23 05:19:49"
     git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
     git_modifiers        = "93744932+try-panwiac"
     git_org              = "try-panwiac"
