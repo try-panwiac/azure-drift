@@ -102,9 +102,9 @@ resource "azurerm_virtual_machine" "example" {
     disable_password_authentication = false
   }
   tags = {
-    git_commit           = "8a30ad14fcd47a709b591448ae378b510ac44b60"
+    git_commit           = "01d58c7d8eb66d1ff644bb95dcaf495f7e0d2ba0"
     git_file             = "vm.tf"
-    git_last_modified_at = "2022-09-23 05:19:49"
+    git_last_modified_at = "2022-09-23 05:26:17"
     git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
     git_modifiers        = "93744932+try-panwiac"
     git_org              = "try-panwiac"
