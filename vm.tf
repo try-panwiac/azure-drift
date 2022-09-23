@@ -99,7 +99,7 @@ resource "azurerm_virtual_machine" "example" {
   }
 
   os_profile_linux_config {
-    disable_password_authentication = true
+    disable_password_authentication = false
   }
   tags = {
     git_commit           = "8a30ad14fcd47a709b591448ae378b510ac44b60"
