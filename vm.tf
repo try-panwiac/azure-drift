@@ -1,6 +1,16 @@
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-resources"
   location = "${var.location}"
+  tags = {
+    git_commit           = "5e27e7d0a73139c83c16e88b4f4aca0eee81319c"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 05:10:11"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "28e06169-b93a-4bac-a600-741050f66bec"
+  }
 }
 
 resource "azurerm_virtual_network" "example" {
@@ -8,6 +18,16 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
   location            = "${azurerm_resource_group.example.location}"
   resource_group_name = "${azurerm_resource_group.example.name}"
+  tags = {
+    git_commit           = "5e27e7d0a73139c83c16e88b4f4aca0eee81319c"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 05:10:11"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "09b3e5bc-1f6f-4957-bac4-830fe441b9d7"
+  }
 }
 
 resource "azurerm_subnet" "example" {
@@ -26,6 +46,16 @@ resource "azurerm_network_interface" "example" {
     name                          = "testconfiguration1"
     subnet_id                     = "${azurerm_subnet.example.id}"
     private_ip_address_allocation = "Dynamic"
+  }
+  tags = {
+    git_commit           = "5e27e7d0a73139c83c16e88b4f4aca0eee81319c"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 05:10:11"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "a4c3d766-6241-4a90-a54f-549741e3890d"
   }
 }
 
@@ -58,14 +88,24 @@ resource "azurerm_virtual_machine" "example" {
     managed_disk_type = "Standard_LRS"
   }
 
-#  os_profile {
-#    computer_name  = "hostname"
-#    admin_username = "testadmin"
-#    admin_password = "Password1234!"
-#  }
+  #  os_profile {
+  #    computer_name  = "hostname"
+  #    admin_username = "testadmin"
+  #    admin_password = "Password1234!"
+  #  }
 
   os_profile_linux_config {
     disable_password_authentication = true
+  }
+  tags = {
+    git_commit           = "5e27e7d0a73139c83c16e88b4f4aca0eee81319c"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 05:10:11"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "213aba02-abfb-4981-829b-f591a67f0ad4"
   }
 }
 
