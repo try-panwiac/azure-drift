@@ -5,6 +5,16 @@ variable "prefix" {
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-resources"
   location = "West Europe"
+  tags = {
+    git_commit           = "c5db2b0bb66db2078e2faa900f0fd762b839adba"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 04:36:43"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "caa147ab-67bb-4133-bcf5-62e9a5d2db10"
+  }
 }
 
 resource "azurerm_virtual_network" "main" {
@@ -12,6 +22,16 @@ resource "azurerm_virtual_network" "main" {
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
+  tags = {
+    git_commit           = "c5db2b0bb66db2078e2faa900f0fd762b839adba"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 04:36:43"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "271dfad8-7ae3-4f33-9cd7-15b35a09f8f6"
+  }
 }
 
 resource "azurerm_subnet" "internal" {
@@ -30,6 +50,16 @@ resource "azurerm_network_interface" "main" {
     name                          = "testconfiguration1"
     subnet_id                     = azurerm_subnet.internal.id
     private_ip_address_allocation = "Dynamic"
+  }
+  tags = {
+    git_commit           = "c5db2b0bb66db2078e2faa900f0fd762b839adba"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 04:36:43"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "7d704815-bb07-4885-984f-eefe50410cb2"
   }
 }
 
@@ -67,6 +97,14 @@ resource "azurerm_virtual_machine" "main" {
     disable_password_authentication = false
   }
   tags = {
-    environment = "staging"
+    environment          = "staging"
+    git_commit           = "c5db2b0bb66db2078e2faa900f0fd762b839adba"
+    git_file             = "vm.tf"
+    git_last_modified_at = "2022-09-23 04:36:43"
+    git_last_modified_by = "93744932+try-panwiac@users.noreply.github.com"
+    git_modifiers        = "93744932+try-panwiac"
+    git_org              = "try-panwiac"
+    git_repo             = "azure-drift"
+    yor_trace            = "7538645e-4bbe-4755-b26e-381395b0f3aa"
   }
 }
